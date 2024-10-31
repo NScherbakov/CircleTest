@@ -19,20 +19,20 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-  
-  tryToDoSomething:
-      docker:
-      # Specify the version you desire here
-      # See: https://circleci.com/developer/images/image/cimg/base
-      - image: cimg/base:current
-    # Add steps to the job
-    # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      # Checkout the code as the first step.
-      - checkout
-      - run:
-          name: "tryToDoSomething"
-          command: "echo tryToDoSomething print pls"
+#  
+#  tryToDoSomething:
+#      docker:
+#      # Specify the version you desire here
+#      # See: https://circleci.com/developer/images/image/cimg/base
+#      - image: cimg/base:current
+#    # Add steps to the job
+#    # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
+#    steps:
+#      # Checkout the code as the first step.
+#      - checkout
+#      - run:
+#          name: "tryToDoSomething"
+#          command: "echo tryToDoSomething print pls"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
@@ -40,6 +40,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-  second-hello:
-    jobs:
-      - tryToDoSomething
+#  second-hello-workflow:
+#    jobs:
+#      - tryToDoSomething
